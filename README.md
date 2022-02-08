@@ -1,1 +1,1 @@
-diversos projetos do livro do livro relatorios php novatec autor 
+livro relatorios php novatec 
