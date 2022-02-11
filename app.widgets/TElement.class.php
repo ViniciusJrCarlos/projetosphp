@@ -88,7 +88,7 @@
 
                         $child->show();
 
-                    }else if((is_string($child))or (is_numeric($child)))
+                    }else if ((is_string($child)) or (is_numeric($child)))
                     {
 
                         //se for texto
