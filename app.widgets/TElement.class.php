@@ -5,9 +5,14 @@
     class TElement
     {
 
-        private $name; //nome da tag
-        private $properties; // propriedades da tag 
-        private $children; // conteudo da tag
+        //  private $_tags = ['doctype', 'br', 'hr', 'input', 'meta', 'base', 'basefont', 'img', 'source'];
+        // = ['html', 'head', 'title', 'body', 'center', 'p', 'img', 'hr', 'a', 'br', 'input', 'button']
+        private $name; 
+        //nome da tag
+        private $properties;
+        // propriedades da tag 
+        private $children; 
+        // conteudo da tag
 
         public function __construct($name)
         {
@@ -29,7 +34,7 @@
             $this->properties[$name] = $value;
 
         }
-
+        
         //metodo add
 
         public function add($child)
@@ -41,18 +46,18 @@
 
         //metodo open
 
-        private function open()
+        public function open()
         {
             //exibe a tag abertura
 
             echo "<{$this->name}";
 
-            if($this->properties)
+            if ($this->properties)
             {
 
                 //pecorre as propriedades
 
-                foreach($this->properties as $name=>$value)
+                foreach ($this->properties as $name=>$value)
                 {
 
                     echo "{$name}=\"{$value}\"";
@@ -74,7 +79,7 @@
 
             //se possui conteudo
 
-            if($this->children)
+            if ($this->children)
             {
 
                 //percorre todos objetos filhos
@@ -83,7 +88,7 @@
 
                     //se for objeto
 
-                    if(is_object($child))
+                    if (is_object($child))
                     {
 
                         $child->show();

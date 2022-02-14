@@ -1,19 +1,21 @@
 <?php
 
-    include_once 'app.widgets/TElement.class.php';
+    require_once ("app.widgets/TElement.class.php");
 
     //inicio o documento html
     $html = new TElement('html');
 
+    //$html->add($html);
     //instancia seção head
     $head = new TElement('head');
     $head->add($head); //adiciona ao html
 
     //define o titulo da pagina
-    $title = new TElement('title');
-    $title->add('Titulo da página');
+    $title = new TElement("title");
+    $title->add("Titulo da página");
     $head->add($title); //adiciona ao head
-
+  
+   /// echo $head;
     //inicio o body do html
     $body = new TElement('body');
     $body->bgcolor = '#ffffdd';
@@ -61,8 +63,8 @@
     //exibe o html com todos elementos - filho
     $html->show();
 
-
-
+   // var_dump($html);
+   // var_dump($a);
 
 
 ?>
