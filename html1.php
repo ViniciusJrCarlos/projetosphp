@@ -4,17 +4,18 @@
 
     //inicio o documento html
     $html = new TElement('html');
-
+    //$html->add($html);
     //$html->add($html);
     //instancia seção head
     $head = new TElement('head');
     $head->add($head); //adiciona ao html
 
     //define o titulo da pagina
-    $title = new TElement("title");
-    $title->add("Titulo da página");
+    $title = new TElement('title');
+    $title->add('ola mundo');
+    //$title = new TElement('</title>');
     $head->add($title); //adiciona ao head
-  
+    
    /// echo $head;
     //inicio o body do html
     $body = new TElement('body');
@@ -26,17 +27,17 @@
 
     //instancia um paragrafo
     $p = new TElement('p');
-    $p->align = 'center';
+    $p->align = 'left';
     $p->add('Sport Club Corinthians Paulistaaaaaaa');
     $center->add($p); //adiciona ao body
 
     //instancia uma imagem
     $img = new TElement('img');
     $img->src = 'images/corinthians.jpg';
-    $img->width = '120';
-    $img->height = '120';
+    $img->width = '120px';
+    $img->height = '120px';
     $center->add($img); //adiciona ao body
-
+    //$img = new TElement('</img>');
     //instancia um separador horizontal
     $hr = new TElement('hr');
     $hr->width = '150px';
@@ -54,8 +55,8 @@
     $center->add($br);
 
     //instancia um botão
-    $input= new TElement('input');
-    $input->type = 'button';
+    $input= new TElement("<input>");
+    $input->type = '<button>';
     $input->value = "clique aqui para saber...";
     $input->onclick = "alert('Clube do Povo é o Coringão!')";
     $center->add($input); //adiciona ao body

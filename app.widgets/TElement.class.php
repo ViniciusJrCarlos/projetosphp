@@ -7,20 +7,22 @@
 
         //  private $_tags = ['doctype', 'br', 'hr', 'input', 'meta', 'base', 'basefont', 'img', 'source'];
         // = ['html', 'head', 'title', 'body', 'center', 'p', 'img', 'hr', 'a', 'br', 'input', 'button']
-        private $name; 
+        ///private $name = ['html', 'head', 'title', 'body', 'center', 'p', 'img', 'hr', 'a', 'br', 'input', 'button']; 
+        public $name;
         //nome da tag
-        private $properties;
+        public $properties;
         // propriedades da tag 
-        private $children; 
+        public $children; 
         // conteudo da tag
 
-        public function __construct($name)
+        function __construct($name)
         {
 
             //define o nome do elemento
 
             $this->name = $name;
-
+           // $this->properties = $properties;
+            //$this->children = $children;
         }
 
         //metodo set 
@@ -46,10 +48,10 @@
 
         //metodo open
 
-        public function open()
+        private function open()
         {
             //exibe a tag abertura
-
+            //parei aqui na analise linha 52
             echo "<{$this->name}";
 
             if ($this->properties)
