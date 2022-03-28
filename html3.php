@@ -9,7 +9,17 @@
     $style->font_family = 'verdana';
     $style->font_size = '20pt';
     $style->font_weight = 'bold';
-    
+    $style->show();
 
+    //instancia um paragrafo
+
+    $texto = new TElement('p');
+    $texto->align = 'center';
+    $texto->add('Sport clube Corinthians');
+
+    $texto->class = 'estilo_texto';
+    $texto->show();
+
+    
 
 ?>
